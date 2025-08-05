@@ -1,10 +1,10 @@
-# 🧠 CNN with Regularisation on Fashion MNIST
+# CNN with Regularisation on Fashion MNIST
 
 This project builds on the base CNN model from [this repo](https://github.com/adabyt/tensorflow-cnn-fashion-mnist), extending it with **Batch Normalisation** and **Dropout** to improve generalisation and reduce overfitting. The model is trained and evaluated on the [Fashion MNIST dataset](https://github.com/zalandoresearch/fashion-mnist).
 
 ---
 
-## 📌 Overview
+## Overview
 
 The CNN architecture integrates:
 - **Batch Normalisation** after convolutional and dense layers  
@@ -17,7 +17,7 @@ These additions aim to:
 
 ---
 
-## 🧪 Dataset
+## Dataset
 
 The model is trained on the Fashion MNIST dataset:
 - 60,000 training samples, 10,000 test samples
@@ -26,7 +26,7 @@ The model is trained on the Fashion MNIST dataset:
 
 ---
 
-## ⚙️ Model Architecture
+## Model Architecture
 
 | Layer Type           | Notes                                                       |
 |----------------------|-------------------------------------------------------------|
@@ -40,19 +40,19 @@ The model is trained on the Fashion MNIST dataset:
 
 ---
 
-## 🧠 Notes on Regularisation & Training
+## Notes on Regularisation & Training
 
-### 🏋️ Model Training Observations
+### Model Training Observations
 
 - **Validation accuracy** is comparable to the unregularised CNN.
 - **Validation loss** is **lower** and more stable — a sign of better generalisation.
 - **Training accuracy** and **training loss** are slightly worse than the previous CNN — a good sign, as the model is **not overfitting**.
 
-> ✅ The regularized model generalises better and is less likely to memorise training data.
+*The regularised model generalises better and is less likely to memorise training data.*
 
 ---
 
-### 🔁 Dropout Rate Experiments
+### Dropout Rate Experiments
 
 | Dropout Rate | Test Accuracy | Test Loss | Epoch w/ Lowest Validation Loss |
 |--------------|---------------|-----------|----------------------------------|
@@ -62,7 +62,7 @@ The model is trained on the Fashion MNIST dataset:
 | `0.5`        | 0.9066        | 0.2695    | 9                                |
 | _Previous CNN_ | 0.9101      | 0.2874    | 7                                |
 
-🔍 **Interpretation**:
+**Interpretation**:
 - A **lower dropout rate** consistently yields **better accuracy and lower loss**.
 - This may suggest:
   - The model benefits from **more node interconnectivity** on this dataset.
@@ -70,29 +70,29 @@ The model is trained on the Fashion MNIST dataset:
 
 ---
 
-## 📈 Final Evaluation
+## Final Evaluation
 
-- ✅ **Test Accuracy**: ~0.9066  
-- ✅ **Test Loss**: ~0.2695  
-- 🧪 First 5 predictions matched the true labels perfectly
+- **Test Accuracy**: ~0.9066  
+- **Test Loss**: ~0.2695  
+- First 5 predictions matched the true labels perfectly
 
 ---
 
-## 🧠 Author’s Note
+## Author’s Note
 
 This project builds on [my previous CNN implementation](https://github.com/adabyt/tensorflow-cnn-fashion-mnist) by experimenting with normalisation and dropout strategies to improve generalisation and reduce overfitting.  
 
 ---
 
-## 📚 References
+## References
 
 - [Fashion MNIST Dataset](https://github.com/zalandoresearch/fashion-mnist)
 - [TensorFlow Keras Docs](https://www.tensorflow.org/api_docs/python/tf/keras)
 - [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://jmlr.org/papers/v15/srivastava14a.html)
-- [Batch Normalization: Accelerating Deep Network Training (Ioffe & Szegedy, 2015)](https://arxiv.org/abs/1502.03167)
+- [Batch Normalisation: Accelerating Deep Network Training (Ioffe & Szegedy, 2015)](https://arxiv.org/abs/1502.03167)
 
 ---
 
-## 📌 License
+## License
 
 MIT License
